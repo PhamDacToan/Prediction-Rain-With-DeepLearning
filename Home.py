@@ -295,12 +295,12 @@ features = features[(features["Cloud9am"]<1.8)]
 features = features[(features["Cloud3pm"]<2)]
 features = features[(features["Temp9am"]<2.3)&(features["Temp9am"]>-2)]
 features = features[(features["Temp3pm"]<2.3)&(features["Temp3pm"]>-2)]
-def p_v_r_outlier():
-    plt.figure(figsize=(10,5))
-    sns.boxenplot(data = features)
-    plt.xticks(rotation=90)
-    st.pyplot()
-p_v_r_outlier()
+# def p_v_r_outlier():
+#     plt.figure(figsize=(10,5))
+#     sns.boxenplot(data = features)
+#     plt.xticks(rotation=90)
+#     st.pyplot()
+# p_v_r_outlier()
 
 st.header('Xây dựng mô hình')
 X = features.drop(['RainTomorrow'], axis = 1)
