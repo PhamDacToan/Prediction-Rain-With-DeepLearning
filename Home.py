@@ -36,7 +36,7 @@ st.balloons()
 st.title("🌤 XÂY DỰNG MÔ HÌNH HỒI QUY VÀ DỰ ĐOÁN THỜI TIẾT", )
 st.markdown('##')
 
-df= pd.read_csv('C:\@@Learn\Streamlit with python\Data\weatherAUS.csv')
+df= pd.read_csv('https://raw.githubusercontent.com/PhamDacToan/Prediction-Rain-With-DeepLearning/master/Data/weatherAUS.csv')
 
 st.header('DATASET')
 st.caption('Tập dữ liệu mẫu')
