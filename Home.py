@@ -180,38 +180,6 @@ df.head()
 
 st.dataframe(df.iloc[:, 23:])
 
-st.subheader('Biểu đồ phân phối của ngày trong khoảng 1 năm')
-def v_line_d():
-    section = df[:360]
-    plt.figure(figsize=(10, 6))
-    tm = section["day"].plot(color="lightgreen")
-    tm.set_title("Distribution Of Days Over Year")
-    tm.set_ylabel("Days In month")
-    tm.set_xlabel("Days In Year")
-    st.pyplot()
-v_line_d()
-
-st.subheader('Biểu đồ phân phối chu kỳ của tháng')
-def v_scatter_month():
-    plt.figure(figsize=(10, 6))
-    cyclic_month = sns.scatterplot(x="month_sin",y="month_cos",data=df, color="lightblue")
-    cyclic_month.set_title("Cyclic Encoding of Month")
-    cyclic_month.set_ylabel("Cosine Encoded Months")
-    cyclic_month.set_xlabel("Sine Encoded Months")
-    st.pyplot()
-v_scatter_month()
-
-st.subheader('Biểu đồ phân phối chu kỳ của ngày')
-def v_scatter_day():
-    # Biểu đồ phân phối chu kỳ của ngày
-    plt.figure(figsize=(10, 6))
-    cyclic_day = sns.scatterplot(x='day_sin',y='day_cos',data=df, color="#C2C4E2")
-    cyclic_day.set_title("Cyclic Encoding of Day")
-    cyclic_day.set_ylabel("Cosine Encoded Day")
-    cyclic_day.set_xlabel("Sine Encoded Day")
-    st.pyplot()
-v_scatter_day()
-
 st.header('TIỀN XỬ LÝ DỮ LIỆU')
 
 st.subheader('Kiểm tra giá trị null của cột object')
