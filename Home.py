@@ -218,11 +218,11 @@ for i in num_cols:
 for i in num_cols:
     df[i].fillna(df[i].median(), inplace=True)
 
-st.subheader('Biểu đồ hiển thị lượng mưa hằng năm')
-def v_line_rainfall():
-    sns.lineplot(x=df['year'], y=df['Rainfall'])
-    st.pyplot()
-v_line_rainfall()
+# st.subheader('Biểu đồ hiển thị lượng mưa hằng năm')
+# def v_line_rainfall():
+#     sns.lineplot(x=df['year'], y=df['Rainfall'])
+#     st.pyplot()
+# v_line_rainfall()
 
 st.subheader('Biểu đồ thể hiện tốc độ gió của từng năm')
 def v_bar_speed():
