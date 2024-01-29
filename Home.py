@@ -265,14 +265,14 @@ features = pd.DataFrame(features, columns=col_names)
 
 st.dataframe(features.describe().T)
 
-st.subheader('Kiểm tra ngoại lai (outlier)')
-def p_v_outlier():
-    colours = ["#D0DBEE", "#C2C4E2", "#EED4E5", "#D1E6DC", "#BDE2E2"]
-    plt.figure(figsize=(10,5))
-    sns.boxenplot(data = features,palette = colours)
-    plt.xticks(rotation=90)
-    st.pyplot()
-p_v_outlier()
+# st.subheader('Kiểm tra ngoại lai (outlier)')
+# def p_v_outlier():
+#     colours = ["#D0DBEE", "#C2C4E2", "#EED4E5", "#D1E6DC", "#BDE2E2"]
+#     plt.figure(figsize=(10,5))
+#     sns.boxenplot(data = features,palette = colours)
+#     plt.xticks(rotation=90)
+#     st.pyplot()
+# p_v_outlier()
 
 st.subheader('Xóa bỏ outlier')
 features[["RainTomorrow"]] = target
